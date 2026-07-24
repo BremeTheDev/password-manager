@@ -5,9 +5,12 @@ def add():
     password = input("Password:")
     with open("passwords.json","r") as file:
         data = json.load(file)
-    data[website] = {
-        username : password
-    }
-    with open("passwords.json","w") as file:
-        json.dump(data, file, indent=4)
-    print("\n|| PASSWORD SUCCESSFULLY ENTERED! ||")
+    if website in data:
+        print("| PASSWORD ALREADY EXISTS! |")
+    else:
+        data[website] = {
+            username : password
+        }
+        with open("passwords.json","w") as file:
+            json.dump(data, file, indent=4)
+        print("\n|| PASSWORD SUCCESSFULLY ENTERED! ||")

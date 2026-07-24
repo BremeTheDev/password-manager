@@ -2,6 +2,7 @@ from menu_pass import menu
 from add_pass import add
 from view_pass import view
 from search_pass import search
+from delete_pass import dlt
 
 menu()
 while True:
@@ -14,9 +15,11 @@ while True:
         elif choice == 3:
             search()
         elif choice == 4:
+            dlt()
+        elif choice == 5:
             break
         else:
-            print("INVALID CHOICE!")
+            print("| INVALID CHOICE! |")
             continue
     except ValueError:
-        print("INVALID CHOICE!")
+        print("| INVALID CHOICE! |")

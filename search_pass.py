@@ -6,11 +6,14 @@ def search():
         website = input("\nWebsite:")
         if website in data_read:
             account = data_read[website]
+            print("\n------------------")
+            print("| FOUND PASSWORD |")
+            print("------------------")
             for username, password in account.items():
                 print("Website:", website)
                 print("Username:", username)
                 print("Password:", password)
-                break
+            break
         else:
-            print("WEBSITE NOT FOUND!")
+            print("| PASSWORD NOT FOUND! |")
             continue
