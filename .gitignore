@@ -1,2 +1,5 @@
 passwords.json
 key.key
+salt.bin
+master.key
+master_pass.bin
